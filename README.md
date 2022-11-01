@@ -7,8 +7,6 @@ It's reportedly included with Docker when using the `--init` option with `docker
 
 ## Explanation
 
-With the expectation being that a containerized service may need control over the shutdown/cleanup process...
-
 This repository provides a script: `runner.sh`
 
 This is used as an `entrypoint` for the container. It spawns a mock daemon (`nc -l`) and will trap these signals:
@@ -17,9 +15,9 @@ This is used as an `entrypoint` for the container. It spawns a mock daemon (`nc 
  - `SIGQUIT`
  - `SIGABRT`
 
-Once the service is running, the script uses `wait` to for either the process to terminate, or a signal to be trapped.
+Once the service is running, the script uses `wait` for either the process to terminate, or a signal to be trapped.
 
-`tini` makes this possible -- it forwards the signals sent by the Docker daemon to the trapping script.
+`tini` makes this possible -- it forwards the signals it receives from the Docker daemon to the trapping script.
 
 The `_signal_handler` function in the script provides a handle for the shutdown process.
 
