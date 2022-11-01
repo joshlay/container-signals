@@ -3,7 +3,7 @@ Short and sweet example for using `trap` in BASH with Docker containers to handl
 
 **Note**: While this uses *tini* as a very simple init process (PID 1) to handle spawning the actual process/pass signals, the image doesn't _need_ to include it.
 
-It's included with Docker when using the `--init` option, see [upstream](https://github.com/krallin/tini)
+It's reportedly included with Docker when using the `--init` option with `docker run`, see [upstream](https://github.com/krallin/tini)
 
 ## Example
 
