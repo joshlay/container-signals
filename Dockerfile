@@ -1,7 +1,6 @@
 FROM fedora:36
 
 COPY runner.sh /root/runner.sh
-RUN dnf -y up && dnf -y install dumb-init nmap-ncat && dnf clean all
+RUN dnf -y up && dnf -y install tini-static nmap-ncat procps-ng && dnf clean all
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["/root/runner.sh"]
+ENTRYPOINT ["/usr/bin/tini-static", "--", "/root/runner.sh"]
