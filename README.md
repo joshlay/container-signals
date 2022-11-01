@@ -21,6 +21,8 @@ Once the service is running, the script uses `wait` for either the process to te
 
 The `_signal_handler` function in the script provides a handle for the shutdown process.
 
+This is where checking on agent work status or cleanup before/after shutdown would happen.
+
 **Note**: `SIGKILL` _cannot_ be trapped. This is generally used in emergency situations (out-of-memory/host machine shutdown timeout) and is unavoidable/expected.
 
 ## Example
