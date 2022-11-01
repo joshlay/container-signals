@@ -32,3 +32,7 @@ The left pane shows the container logs/messages, including `ps` output with the 
 While the right pane shows the stop request.
 
 ![example-screen](./Trapped_Shutdown_Screenshot.png)
+
+## Dependencies
+
+ - `BASH` (regular `sh` may do, untested)
