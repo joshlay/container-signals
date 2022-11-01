@@ -9,6 +9,8 @@ It's included with Docker when using the `--init` option, see [upstream](https:/
 
 See below for an example of how the script in the container traps the signal, and runs through some mock cleanup steps
 
-The top pane shows the stop request on the container, while the bottom pane shows the logs.
+The left pane shows the container logs/messages, including `ps` output with the running process -- _after_ the signal is trapped
+
+While the right pane shows the stop request.
 
 ![example-screen](./Trapped_Shutdown_Screenshot.png)
