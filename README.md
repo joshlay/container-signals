@@ -35,4 +35,6 @@ While the right pane shows the stop request.
 
 ## Dependencies
 
- - `BASH` (regular `sh` may do, untested)
+ - `BASH`
+
+While the provided Docker container installs `tini-static`, `nmap-ncat`, and `procps-ng`, these are likely not truly needed.
